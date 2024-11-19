@@ -1,5 +1,5 @@
-import { Pokemon } from "../domain/model/pokemon";
-import { ListPaginated } from "../domain/types/listPaginated";
+import { Pokemon } from "../domain/model/pokemon.interface";
+import { ListPaginated } from "../domain/types/listPaginated.interface";
 import { AxiosInstance } from "../infrastructure/axios/axiosConfig";
 
 interface PaginationParams {

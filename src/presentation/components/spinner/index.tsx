@@ -3,7 +3,7 @@ import "./pokeStyles.css";
 export const PokeSpinner = () => {
   return (
     <div className="wrapper">
-      <div className="pokeball"></div>
+      <div data-testid="pokeball" className="pokeball"></div>
     </div>
   );
 };

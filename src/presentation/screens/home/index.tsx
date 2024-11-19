@@ -15,7 +15,7 @@ import {
 
 export const Home = () => {
   const {
-    count,
+    numberOfPages,
     list,
     page,
     handleChangePage,
@@ -57,7 +57,7 @@ export const Home = () => {
           <Divider />
           <CardActions>
             <PaginationControlled
-              count={count}
+              count={numberOfPages}
               page={page}
               handleChange={handleChangePage}
             />

@@ -11,7 +11,7 @@ export default function PaginationControlled({
   count,
   page,
   handleChange,
-}: PaginationParams) {
+}: Readonly<PaginationParams>) {
   return (
     <Pagination
       color="primary"

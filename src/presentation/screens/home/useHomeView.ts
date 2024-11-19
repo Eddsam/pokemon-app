@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { getListPokemon } from "../../../data/pokemon.services";
-import { Result } from "../../../domain/types/listPaginated";
+import { Result } from "../../../domain/types/listPaginated.interface";
 
 const itemsPerPage = 20;
 
 export const useHomeView = () => {
-  const [count, setCount] = useState<number>(0);
+  const [numberOfPages, setNumberOfPages] = useState<number>(0);
   const [prev, setPrev] = useState<string | null>("");
   const [next, setNext] = useState<string | null>("");
   const [listPokemon, setListPokemon] = useState<Result[]>([]);
@@ -31,7 +31,7 @@ export const useHomeView = () => {
 
   useEffect(() => {
     getListPokemon({}).then((response) => {
-      setCount(Math.ceil(response.count / itemsPerPage));
+      setNumberOfPages(Math.ceil(response.count / itemsPerPage));
       setPrev(response.previous);
       setNext(response.next);
       setListPokemon(response.results);
@@ -61,7 +61,7 @@ export const useHomeView = () => {
   };
 
   return {
-    count,
+    numberOfPages,
     list: listFiltered,
     prev,
     next,
