@@ -1,5 +1,6 @@
 body {
-  background-image: url("./presentation/assets/pokedex.jpg");
+  background-image: url("./presentation/assets/pokedex.png");
+  background-size: cover;
   height: 100%;
 }
 

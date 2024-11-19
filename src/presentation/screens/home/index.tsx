@@ -31,14 +31,14 @@ export const Home = () => {
         marginTop: "10vh",
       }}
     >
-      <Grid2 size={{ xs: 12, md: 8 }} offset={{ md: 2 }}>
+      <Grid2 size={{ xs: 12, md: 6 }} offset={{ md: 3 }}>
         <SearchInput
           value={textFilters}
           onChange={handleOnChange}
           onClearField={handleOnClearField}
         />
       </Grid2>
-      <Grid2 size={{ xs: 12, md: 8 }} offset={{ md: 2 }} textAlign={"center"}>
+      <Grid2 size={{ xs: 12, md: 6 }} offset={{ md: 3 }} textAlign={"center"}>
         <Card elevation={5}>
           <CardHeader title="Pokédex" />
           <Divider />
